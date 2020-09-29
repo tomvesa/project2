@@ -1,0 +1,97 @@
+/* ------------fonts------------*/
+@font-face {
+    font-family: "Titillium Web";
+    src: url("/fonts/Titillium-Bold.otf") format("otf"),
+         url("/fonts/Titillium-BoldItalic.otf") format("otf"),
+         url("/fonts/Titillium-Light.otf") format("otf"),
+         url("/fonts/Titillium-LightItalic.otf") format("otf"),
+         url("/fonts/Titillium-Regular.otf") format("otf"),
+         url("/fonts/Titillium-RegularItalic.otf") format("otf"),
+         url("/fonts/Titillium-Semibold.otf") format("otf"),
+         url("/fonts/Titillium-SemiboldItalic.otf") format("otf"),
+  }
+/* -------  base styles -------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: #32404e
+    
+}
+
+header {
+    background: #f2f2f28c;
+    padding: 2em 1em;
+}
+
+main {
+    padding: 0 1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+dt,
+dd {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: #751f6e;
+}
+
+/* ----- Layout Styles ------ */
+
+.header-top {
+    text-align: center;
+}
+
+.header-bottom {
+    text-align: center;
+    margin-top: 15px
+}
+
+.header-bottom p {
+    padding: 0 20px;
+    text-align: initial
+}
+
+.main-nav li {
+  padding: 5px 0;
+  border-bottom: 1px solid #b5b1b17a;
+  font-weight: 600;
+}
+
+.main-nav li:last-child {
+  border-bottom: navajowhite
+}
+
+.main-nav li:hover {
+  background: lightsteelblue;
+  box-shadow: 0 1px 15px -6px;
+  color: ;
+}
+
+.main-nav li a {
+  display: block;
+  letter-spacing: 2px;    
+}
+
+.main-nav li a:hover {
+  display: block;
+  letter-spacing: 2px;   
+  color: whitesmoke;
+}
+
+/*----------main content ---------- */
+.section-title {
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 0 2px 3px #b5b1b1;
+}
