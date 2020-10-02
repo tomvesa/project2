@@ -1,6 +1,6 @@
 /* ------------fonts------------*/
 @font-face {
-    font-family: "Titillium Web";
+    font-family: "Titillium Web"; 
     src: url("/fonts/Titillium-Bold.otf") format("otf"),
          url("/fonts/Titillium-BoldItalic.otf") format("otf"),
          url("/fonts/Titillium-Light.otf") format("otf"),
@@ -8,8 +8,17 @@
          url("/fonts/Titillium-Regular.otf") format("otf"),
          url("/fonts/Titillium-RegularItalic.otf") format("otf"),
          url("/fonts/Titillium-Semibold.otf") format("otf"),
-         url("/fonts/Titillium-SemiboldItalic.otf") format("otf"),
+         url("/fonts/Titillium-SemiboldItalic.otf") format("otf")
   }
+
+@font-face{  
+  font-family: "Nunito";
+        src:  url("/fonts/Nunito-Black.ttf") format("ttf"),
+                url("/fonts/Nunito-Bold.ttf") format("ttf"),
+                url("/fonts/Nunito-Regular.ttf") format("ttf"),
+                url("/fonts/Nunito-Italic.ttf") format("ttf")
+}
+
 /* -------  base styles -------*/
 
 * {
@@ -22,9 +31,14 @@ body {
     
 }
 
-header {
+header, footer, #contact {
     background: #f2f2f28c;
     padding: 2em 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Nunito', sans-serif;
+ font-weight: 700;
 }
 
 main {
@@ -37,7 +51,22 @@ img {
 
 dt,
 dd {
-    display: inline-block;
+    display: inline-flex;
+    width: 45%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+dt {
+    text-align: right;
+    padding-right: 5px;
+
+}
+
+dd{
+    text-align: left;
+    padding-left: 5px;
+    font-weight: 700;
 }
 
 a {
@@ -74,18 +103,24 @@ a {
 .main-nav li:hover {
   background: lightsteelblue;
   box-shadow: 0 1px 15px -6px;
-  color: ;
+  color: #fff;
 }
 
 .main-nav li a {
   display: block;
-  letter-spacing: 2px;    
+  letter-spacing: 2px;  
+  color: inherit;  
 }
 
 .main-nav li a:hover {
-  display: block;
   letter-spacing: 2px;   
   color: whitesmoke;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.4em;
+    letter-spacing: 1px;
 }
 
 /*----------main content ---------- */
@@ -94,4 +129,97 @@ a {
     text-align: center;
     letter-spacing: 5px;
     text-shadow: 0 2px 3px #b5b1b1;
+}
+
+#contact {
+    border-bottom: 1px solid #b5b1b17a;
+    margin-left: 0;
+    margin-right: 0;
+    z-index: 1;
+}
+
+
+/* ---- FOOTER ----- */
+
+footer {
+    min-height: 10em;
+    padding: 2em 25px ;
+}
+
+.footer-nav {
+    display: none;
+}
+
+footer .name, .mob-nav {
+    display: inline-block;
+}
+
+footer .name {
+    float: left;
+}
+
+.mob-nav {
+    float: right;
+}
+
+.mob-nav a{
+    color: black;
+}
+
+footer::after {
+    content: "";
+    clear: both;
+}
+
+
+/* -------- MEDIA QUERIES ----------*/
+@media screen and (min-width: 768px) {
+header, main {
+    font-size: 125%;
+}
+.main-nav li{
+    display: inline-flex;
+    margin: 15px;
+    border-bottom: none;
+}
+.header-bottom{
+    position: relative;
+}
+.header-bottom img {
+    float: right;
+    max-height: 200px;
+    max-width: 35%;
+    margin: 8px 0 8px 8px;
+}
+.introduction {
+    max-width: 60%;
+    top: 0px;
+}
+header :after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.section-card {
+    display: inline-block;
+    max-width: 40%;
+    margin: 1em;
+    height: 425px;
+    
+}
+
+.section-card img{
+    top:0px;
+}
+
+.card-title {
+    margin-bottom: 5px;
+}
+
+.card-text {
+    margin-top:8px;
+}
+
+
 }
