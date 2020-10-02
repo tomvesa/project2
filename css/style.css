@@ -177,6 +177,11 @@ footer::after {
 header, main {
     font-size: 125%;
 }
+
+main {
+    padding: 0px;
+    text-align: center;
+}
 .main-nav li{
     display: inline-flex;
     margin: 15px;
@@ -195,7 +200,7 @@ header, main {
     max-width: 60%;
     top: 0px;
 }
-header :after {
+header ::after {
     content: "";
     clear: both;
     display: block;
@@ -203,8 +208,8 @@ header :after {
 
 .section-card {
     display: inline-block;
-    max-width: 40%;
-    margin: 1em;
+    width: 45%;
+    padding: 10px;
     height: 425px;
     
 }
